@@ -1,0 +1,25 @@
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <link rel="shortcut icon" href="/images/weather.png" type="image/x-icon">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <title>Weather</title>
+        <link rel='stylesheet' href='/css/styles.css' />
+        <script src='./js/app.js' defer></script>
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            <div class="info">
+                <p class="location"></p>
+                <p class="forecast"></p>
+            </div>
+            <form> 
+                <input type="text" placeholder="Location">
+                <button type="submit">Search</button>
+            </form>
+            <p class="error"></p>
+        </div>
+        {{>footer}}
+    </body>
+</html>
