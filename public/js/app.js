@@ -19,7 +19,8 @@ document.querySelector("form").addEventListener("submit", (e) => {
 const req = async (address) => {
     forecastEl.innerText = ""
     locationEl.innerText = ""
-    res = await fetch(`http://localhost:5000/weather?address=${address}`)
+    // res = await fetch(`http://localhost:5000/weather?address=${address}`)
+    res = await fetch(`https://tired-jade-chinchilla.cyclic.cloud/weather?address=${address}`)
     data = await res.json()
     if (data.error) {
         errorEl.innerText = "Error message: " + data.error
