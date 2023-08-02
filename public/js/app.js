@@ -24,7 +24,7 @@ const req = async (address) => {
     data = await res.json()
     if (data.error) {
         errorEl.innerText = "Error message: " + data.error
-        errorEl.style.display = 'inline- block'
+        errorEl.style.display = 'inline-block'
         return
     }
     forecastEl.innerText = data.forecast

@@ -11,7 +11,7 @@ const geocode = (address, callback) => {
         if (err) {
             callback('Unable to connect to location services', undefined)
         } else if (res.statusCode !== 200) {
-            callback('response Error: ' + res.statusCode, undefined)
+            callback('qeocode response Error: ' + res.statusCode, undefined)
         } else if (res.body.features.length === 0) {
             callback('Unable to find location', undefined)
         } else {
