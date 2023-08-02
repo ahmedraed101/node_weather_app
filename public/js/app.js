@@ -2,6 +2,7 @@ const infoEl = document.querySelector(".info")
 const forecastEl = infoEl.querySelector(".forecast")
 const locationEl = infoEl.querySelector(".location")
 const errorEl = document.querySelector(".error")
+
 document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault()
     const address = e.target.children[0].value.trim()
@@ -18,7 +19,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
 const req = async (address) => {
     forecastEl.innerText = ""
     locationEl.innerText = ""
-    res = await fetch(`http://localhost:3000/weather?address=${address}`)
+    res = await fetch(`http://localhost:5000/weather?address=${address}`)
     data = await res.json()
     if (data.error) {
         errorEl.innerText = "Error message: " + data.error
